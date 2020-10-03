@@ -1,0 +1,27 @@
+<Address address="{{address}}" />
+<CartTitle/>
+<view wx:for="{{cartArr}}" wx:key="goods_id" class="item">
+	<view class="goods_img">
+		<image src="{{item.goods_small_logo}}" mode="widthFix" lazy-load="true" />
+	</view>
+	<view class="right_box">
+		<view class="name">{{item.goods_name}}</view>
+		<view class="price_num">
+			<view class="price">￥ {{item.goods_price}}</view>
+			<view class="num_box">
+				X {{item.num}}
+			</view>
+		</view>
+	</view>
+</view>
+<view class="footer">
+	<view class="center">
+		<view class="sum">
+			<text class="sum_title">合计：</text>
+			<text class="num">￥ {{allPrice}}</text>
+		</view>
+		<view class="tip">包含运费</view>
+	</view>
+	<view class="right" hover-class="right_hover" bindtap="handleClickPay">支付({{allNums}})</view>
+</view>
+

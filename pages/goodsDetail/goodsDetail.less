@@ -1,0 +1,121 @@
+.page{
+  background-color: #ccc;
+  padding-bottom: 120rpx;
+  swiper{
+    width: 100vw;
+    height: 65vw;
+    background-color: #fff;
+    swiper-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      image{
+        width: 60%;
+      }
+    }
+  }
+  
+  .price{
+    color: rgb(247, 64, 64);
+    font-size: 40rpx;
+    font-weight: bold;
+    padding-left: 20rpx;
+    background-color: #fff;
+  }
+  .title_box{
+    width: 100vw;
+    height: 140rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    .title{
+      padding: 0 30rpx;
+      flex: 4;
+      border-right: 1px solid #ccc;
+      font-size: 30rpx;
+      font-weight: bold;
+      display: -webkit-box; 
+      -webkit-box-orient: vertical; 
+      -webkit-line-clamp: 2; 
+      overflow: hidden; 
+    }
+    .collection{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .colledted:before{
+        color: red;
+      }
+    }
+  }
+  .detail_title{
+    background-color: #fff;
+    color: var(--themeColor);
+    font-size: 40rpx;
+    font-weight: bold;
+    height: 90rpx;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20rpx;
+    border: 1px solid #ccc;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+.footer{
+  width: 100vw;
+  height: 160rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  .item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .text{
+      font-size: 25rpx;
+    }
+    button{
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  .item_hover{
+    opacity: 0.6;
+  }
+  .add{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(246,159, 0);
+    color: #fff;
+    font-size: 35rpx;
+  }
+  .immediately{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(220,60, 71);
+    color: #fff;
+    font-size: 35rpx;
+  }
+}

@@ -1,0 +1,85 @@
+<view class="page">
+	<Address
+	 wx:if="{{showAddress}}"
+	 address="{{address}}"
+	 bindclickAddress="handleClickAddress"
+	/>
+	<view class="top_btn" wx:else>
+		<button plain="true" type="warn" bindtap="handleChooseAdress">获取收货地址</button>
+	</view>
+	<view class="cart_box">
+		<CartTitle/>
+		<view wx:if="{{cartArr.length === 0}}" class="empty_box">
+			<image
+			 class="empty"
+			 src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597990417853&di=55a7c4925194e5a67d31117b60530749&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"
+			 mode="widthFix"
+			 lazy-load="true"
+			/>
+			<text class="empty_tip">
+				购物车还是空的哦~
+			</text>
+		</view>
+		<block wx:else>
+			<view wx:for="{{cartArr}}" wx:key="goods_id" class="item">
+				<label class="checkbox">
+					<checkbox
+					 bindtap="handleClickCheckBox"
+					 data-currentindex="{{index}}"
+					 value="{{item.goods_id}}"
+					 checked="{{item.checked}}"
+					 color="#D4237A"
+					/>
+				</label>
+				<view class="goods_img">
+					<image src="{{item.goods_small_logo || defalutImage}}" mode="widthFix" lazy-load="true" />
+				</view>
+				<view class="right_box">
+					<view class="name">{{item.goods_name}}</view>
+					<view class="price_num">
+						<view class="price">￥ {{item.goods_price}}</view>
+						<view class="num_box">
+							<view
+							 class="btn_box"
+							 hover-class="btn_box2"
+							 bindtap="handleClickBtn"
+							 data-type="minus"
+							 data-index="{{index}}"
+							>-
+							</view>
+							<view class="num">{{item.num}}</view>
+							<view
+							 class="btn_box"
+							 hover-class="btn_box2"
+							 bindtap="handleClickBtn"
+							 data-type="add"
+							 data-index="{{index}}"
+							>+
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+	<view class="footer">
+		<view class="left">
+			<checkbox
+			 value="all"
+			 checked="{{isAllChecked}}"
+			 color="#D4237A"
+			 bindtap="handleClickCheckAll"
+			>全选
+			</checkbox>
+		</view>
+		<view class="center">
+			<view class="sum">
+				<text class="sum_title">合计：</text>
+				<text class="num">￥ {{allPrice}}</text>
+			</view>
+			<view class="tip">包含运费</view>
+		</view>
+		<view class="right" hover-class="right_hover" bindtap="handleClickPay">结算({{allNums}})</view>
+	</view>
+</view>
+

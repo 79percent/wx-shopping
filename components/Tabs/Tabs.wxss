@@ -1,0 +1,18 @@
+.tabs-box {
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tabs-box .tabs-item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  color: #ccc;
+  border-bottom: 1px solid #dfdfdf;
+}
+.tabs-box .choosed {
+  border-bottom-color: var(--themeColor);
+  color: var(--themeColor);
+}

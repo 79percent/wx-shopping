@@ -1,0 +1,198 @@
+.page {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page .address_box {
+  width: 100vw;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20rpx;
+  border-bottom: 1px solid #d4237a;
+}
+.page .address_box .name_tel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .address_box .name_tel text {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.page .address_box .address {
+  font-size: 30rpx;
+}
+.page .top_btn {
+  height: 160rpx;
+  padding: 40rpx 160rpx;
+}
+.page .top_btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.page .cart_box {
+  flex: 1;
+  margin-bottom: 400rpx;
+  width: 100vw;
+}
+.page .cart_box .cart_title {
+  width: 100vw;
+  height: 90rpx;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  border-bottom: 2px solid #f9544e;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page .cart_box .empty_box {
+  width: 100vw;
+  height: 600rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page .cart_box .empty_box .empty {
+  width: 200rpx;
+}
+.page .cart_box .empty_box .empty_tip {
+  font-size: 20rpx;
+  color: #cccccc;
+}
+.page .cart_box .item {
+  width: 100vw;
+  height: 200rpx;
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .cart_box .item .checkbox {
+  flex: 1;
+  padding-left: 20rpx;
+}
+.page .cart_box .item .goods_img {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page .cart_box .item .goods_img image {
+  width: 80%;
+}
+.page .cart_box .item .right_box {
+  flex: 5;
+  height: 100%;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.page .cart_box .item .right_box .name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #333333;
+}
+.page .cart_box .item .right_box .price_num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .cart_box .item .right_box .price_num .price {
+  color: #f95450;
+  font-size: 35rpx;
+}
+.page .cart_box .item .right_box .price_num .num_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 160rpx;
+  height: 40rpx;
+}
+.page .cart_box .item .right_box .price_num .num_box .btn_box {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  border: 1px solid #cccccc;
+}
+.page .cart_box .item .right_box .price_num .num_box .btn_box2 {
+  background-color: #ccc;
+  opacity: 0.5;
+}
+.page .cart_box .item .right_box .price_num .num_box .num {
+  font-size: 30rpx;
+}
+.page .footer {
+  width: 100vw;
+  height: 140rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #cccccc;
+  background-color: #fff;
+}
+.page .footer .left {
+  flex: 2;
+  padding-left: 20rpx;
+}
+.page .footer .center {
+  padding-right: 10rpx;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.page .footer .center .sum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.page .footer .center .sum .sum_title {
+  font-size: 30rpx;
+}
+.page .footer .center .sum .num {
+  font-size: 40rpx;
+  color: #f95450;
+}
+.page .footer .center .tip {
+  font-size: 30rpx;
+}
+.page .footer .right {
+  flex: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4237a;
+  color: #fff;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.page .footer .right_hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,77 @@
+<view>
+  <!-- 搜索框 -->
+  <SearchInput />
+  <!-- 轮播图 -->
+  <view class="swiper-box" >
+    <swiper 
+      autoplay="true" 
+      indicator-dots="true" 
+      interval="2000" 
+      circular="true"
+    > 
+      <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+        <image mode="widthFix" src="{{item.image_src}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航分类 -->
+  <view class="cate-box">
+    <navigator 
+      class="cateItem" 
+      target="" 
+      url="" 
+      open-type="navigate"
+      wx:for="{{cateList}}"
+      wx:key="name"
+    >
+       <image 
+        class="" 
+        mode="widthFix"
+        src="{{item.image_src}}" 
+       >
+       </image>    
+    </navigator>
+  </view>
+  <!-- 楼层 -->
+  <view class="floor-box">
+    <view 
+      class="floor-group"
+      wx:for="{{flootList}}"
+      wx:key="floor_title"
+      wx:for-index="index1"
+      wx:for-item="item1"
+    >
+      <!-- 标题 -->
+      <view class="floor-group-title">
+        <image 
+          class="" 
+          src="{{item1.floor_title.image_src}}" 
+          mode="widthFix" 
+        >
+        </image>
+      </view>
+      <!-- 分类项 -->
+      <view class="floor-group-list">
+        <navigator 
+          class="floor-item" 
+          target="" 
+          url="" 
+          hover-class="navigator-hover" 
+          open-type="navigate"
+          wx:for="{{item1.product_list}}"
+          wx:key="name"
+          wx:for-index="index2"
+          wx:for-item="item2"
+        >
+          <image 
+            class="" 
+            src="{{item2.image_src}}" 
+            mode="scaleToFill"
+          >
+          </image>
+        </navigator>
+          
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+.address_box {
+  width: 100vw;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20rpx;
+  border-bottom: 1px solid #d4237a;
+}
+.address_box .name_tel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.address_box .name_tel text {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.address_box .address {
+  font-size: 30rpx;
+}

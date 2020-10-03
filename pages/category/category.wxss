@@ -1,0 +1,66 @@
+.page {
+  flex: 1;
+}
+.page .container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: calc(100vh - 90rpx);
+}
+.page .container .left {
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+.page .container .left .menu-item {
+  box-sizing: border-box;
+  width: '100%';
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+}
+.page .container .left .choosed-item {
+  border-left: 3px solid #d4237a;
+  color: #d4237a;
+}
+.page .container .left .not-choosed-item {
+  color: #5a5858;
+  border-left: 3px solid #fff;
+}
+.page .container .right {
+  flex: 3;
+}
+.page .container .right .content-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page .container .right .content-group .title {
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: #d4237a;
+}
+.page .container .right .content-group .content-item-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.page .container .right .content-group .content-item-list .content-item {
+  width: 33.33%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.page .container .right .content-group .content-item-list .content-item .content-item-img-box {
+  width: 120rpx;
+  height: 120rpx;
+}

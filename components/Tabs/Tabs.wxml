@@ -1,0 +1,12 @@
+<view class="tabs-box">
+  <view 
+    class="tabs-item {{activeId === item.id ? 'choosed' : '' }}" 
+    wx:for="{{tabsList}}" 
+    wx:key="id"
+    bindtap="handleClick"
+    data-tabid="{{item.id}}"
+  >
+		{{item.title}}
+	</view>
+</view>
+

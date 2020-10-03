@@ -1,0 +1,9 @@
+<view class="address_box" bindtap="handleClick">
+	<view class="name_tel">
+		<text class="name">收货人：{{address.userName}}</text>
+		<text class="tell">{{address.telNumber}}</text>
+	</view>
+	<view class="address">
+		{{address.provinceName + address.cityName +address.countyName +address.detailInfo }}
+	</view>
+</view>

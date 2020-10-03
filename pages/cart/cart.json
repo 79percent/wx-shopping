@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Address": "../../components/Address/Address",
+    "CartTitle": "../../components/CartTitle/CartTitle"
+  },
+  "navigationBarTitleText": "购物车",
+  "backgroundColor": "#cccccc"
+}

@@ -1,0 +1,45 @@
+<view class="page">
+	<!-- 搜索框 -->
+	<SearchInput/>
+	<view class="container">
+		<scroll-view class="left" scroll-y="true">
+			<view
+			 class="menu-item {{index === activeIndex ? 'choosed-item' : 'not-choosed-item'}}"
+			 wx:for="{{leftMenuList}}"
+			 wx:key="cat_id"
+			 bindtap="handleClickMenuItem"
+			 data-activeindex="{{index}}"
+			>
+				{{item.cat_name}}
+			</view>
+		</scroll-view>
+		<scroll-view class="right" scroll-y="true" scroll-top="{{scrollTop}}">
+			<view
+			 class="content-group"
+			 wx:for="{{rightContentList[activeIndex]}}"
+			 wx:key="cat_id"
+			 wx:for-index="index1"
+			 wx:for-item="item1"
+			 wx:if="{{item1.children}}"
+			>
+				<text class="title">{{item1.cat_name}}</text>
+				<view class="content-item-list">
+					<navigator
+					 class="content-item"
+					 wx:for="{{item1.children}}"
+					 wx:key="cat_id"
+					 wx:for-index="index2"
+					 wx:for-item="item2"
+					 url="/pages/goodsList/goodsList?cid={{item2.cat_id}}"
+					>
+						<view class="content-item-img-box">
+							<image class="content-item-img" src="{{item2.cat_icon}}" lazy-load="true" />
+						</view>
+						<text>{{item2.cat_name}}</text>
+					</navigator>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+

@@ -1,0 +1,47 @@
+view {
+  color: var(--themeColor);
+}
+.swiper-box swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.swiper-box swiper image {
+  width: 100%;
+}
+.cate-box {
+  display: flex;
+}
+.cate-box .cateItem {
+  flex: 1;
+  padding: 20rpx;
+}
+.cate-box .cateItem image {
+  width: 100%;
+  height: 100%;
+}
+.floor-box .floor-group .floor-group-title image {
+  width: 100%;
+}
+.floor-box .floor-group .floor-group-list {
+  overflow: hidden;
+}
+.floor-box .floor-group .floor-group-list .floor-item {
+  float: left;
+  width: 33.33%;
+  border-left: 10rpx solid #fff;
+  border-bottom: 10rpx solid #fff;
+}
+.floor-box .floor-group .floor-group-list .floor-item image {
+  width: 100%;
+  height: 100%;
+}
+.floor-box .floor-group .floor-group-list .floor-item:first-child {
+  height: calc(33.33vw * 382 / 229);
+}
+.floor-box .floor-group .floor-group-list .floor-item:nth-last-child(-n+4) {
+  height: calc(33.33vw * 382 / 229 / 2);
+}
+.floor-box .floor-group .floor-group-list .floor-item:nth-child(3),
+.floor-box .floor-group .floor-group-list .floor-item:nth-child(5) {
+  border-right: 10rpx solid #fff;
+}

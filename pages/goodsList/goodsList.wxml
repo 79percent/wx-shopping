@@ -1,0 +1,37 @@
+<view class="page">
+	<!-- 搜索框 -->
+	<SearchInput/>
+	<!-- Tabs切换 -->
+	<Tabs tabsList="{{tabsList}}" activeId="{{activeId}}" bindclickTab="handleClickTab" />
+	<!-- 商品列表 -->
+	<scroll-view
+	 class="list"
+	 scroll-y="false"
+	 scroll-top="0"
+	 refresher-enabled="true"
+	 refresher-triggered="{{refresherTriggered}}"
+	 bindscrolltolower="handleScrolltolower"
+	 bindrefresherrefresh="handlerefresherrefresh"
+	>
+		<navigator
+		 class="item"
+		 wx:for="{{goodsList}}"
+		 wx:key="goods_id"
+		 url="/pages/goodsDetail/goodsDetail?goods_id={{item.goods_id}}"
+		>
+			<view class="left">
+				<image
+				 class=""
+				 src="{{item.goods_small_logo || defalutImage}}"
+				 mode="widthFix"
+				 lazy-load="true"
+				/>
+			</view>
+			<view class="right">
+				<view class="title">{{item.goods_name}}</view>
+				<view class="price">￥ {{item.goods_price}}</view>
+			</view>
+		</navigator>
+	</scroll-view>
+</view>
+
